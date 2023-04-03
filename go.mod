@@ -1,7 +1,7 @@
-module {{repositoryPath}}
+module {{repository.path}}
 
 go 1.15
 
 require (
-	sigs.k8s.io/controller-runtime {{controllerRuntimeVersion}}
+	sigs.k8s.io/controller-runtime v{{controllerRuntimeVersion}}
 )
