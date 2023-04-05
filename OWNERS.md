@@ -1,13 +1,13 @@
 # See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
 
 approvers:
-{{range $i, $team := .github.teams.approvers}}
-- {{.team}}
-{{end}}
+{{- range .github.teams.approvers}}
+- {{ . }}
+{{-end}}
 
 
 
 reviewers:
-{{range $i, $team := .github.teams.reviewers}}
-- {{.team}}
-{{end}}
+{{-range .github.teams.reviewers}}
+- {{ . }}
+{{-end}}
