@@ -1,10 +1,13 @@
 # See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
 
 approvers:
+{{range _, $team := .github.teams.approvers}}
+- {{.team}}
+{{end}}
 
-- astrokube-approvers
+
 
 reviewers:
-
-- astrokube-reviewers
-- astrokube-approvers
+{{range _, $team := .github.teams.reviewers}}
+- {{.team}}
+{{end}}
