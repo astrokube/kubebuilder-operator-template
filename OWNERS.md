@@ -3,11 +3,11 @@
 approvers:
 {{- range .github.teams.approvers}}
 - {{ . }}
-{{-end}}
+{{- end}}
 
 
 
 reviewers:
-{{-range .github.teams.reviewers}}
+{{- range .github.teams.reviewers}}
 - {{ . }}
-{{-end}}
+{{- end}}
