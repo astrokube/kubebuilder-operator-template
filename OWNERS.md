@@ -1,7 +1,7 @@
 # See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
 approvers:
 {{- range .owners}}
-{{- if .roles Has "approver"}}
+{{- if .roles coll.Has "approver"}}
 - {{ .alias }}
 {{- end}}
 {{- end}}
