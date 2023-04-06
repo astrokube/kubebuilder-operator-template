@@ -29,3 +29,5 @@ vendor
 ## SonnarQube reports
 golangci-report.xml
 
+
+.kubebuilder-layout.yaml
