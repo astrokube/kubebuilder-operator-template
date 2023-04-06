@@ -8,12 +8,10 @@ owners:
     members:
       - ivancorrales
       - pasqualet
-    roles:
-      - approver
-      - reviewer
+    roles: ["approver", "reviewer"]
   - alias: astrokube-reviewers
     members:
       - 92nqb
-    roles:
-      - reviewer
+      - redvelvet
+    roles: ["reviewer"]
 
