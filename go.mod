@@ -1,4 +1,4 @@
-module {{.repository.path}}
+module {{.repository.server}}/{{.repository.owner}}/{{.repository.name}}/
 require (
 	k8s.io/apimachinery v0.26.0
 	k8s.io/client-go v0.26.0
