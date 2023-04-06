@@ -7,7 +7,7 @@ approvers:
 {{- end}}
 reviewers:
 {{- range .owners}}
-{{- if .roles.Has  "reviewer" }}
+{{- if .roles.Has in "reviewer" }}
 - {{ .alias }}
 {{- end}}
 {{- end}}
