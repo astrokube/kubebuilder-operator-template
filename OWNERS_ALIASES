@@ -2,8 +2,8 @@
 
 aliases:
 {{- range .owners}}
-    {{.alias}}:
+  {{.alias}}:
 {{- range .members}}
-        - [{{.}}](https://github.com/{{.}})
+    - [{{.}}](https://github.com/{{.}})
 {{- end}}
 {{- end}}
