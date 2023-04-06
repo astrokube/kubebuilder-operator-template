@@ -2,7 +2,6 @@ repository:
   server: github.com
   owner: astrokube
   name: temporal
-
 owners:
   - alias: astrokube-approvers
     members:
@@ -14,4 +13,5 @@ owners:
       - 92nqb
       - redvelvet
     roles: ["reviewer"]
+
 
