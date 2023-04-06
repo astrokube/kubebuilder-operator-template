@@ -3,8 +3,8 @@ approvers:
 {{- range .owners}}
 {{- range .roles}}
 {{- if eq . "approver"}}
-{{- end}}
 - {{ .alias }}
+{{- end}}
 {{- end}}
 {{- end}}
 
