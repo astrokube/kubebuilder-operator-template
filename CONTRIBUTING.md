@@ -10,7 +10,7 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Code of conduct
 
-Please make sure to read and observe our [Contributor Code of Conduct](CODE_OF_CONDUCT,md).
+Please make sure to read and observe our [Contributor Code of Conduct](CODE_OF_CONDUCT.md).
 
 ## Prerequisites
 
