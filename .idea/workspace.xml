@@ -5,44 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="003a0009-0456-493c-8e46-6ecb9a97b385" name="Changes" comment="Add configuration files that are provided by default when running init command with go/v3 plugin">
-      <change afterPath="$PROJECT_DIR$/,github/ISSUE_TEMPLATE/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/,github/dependabot.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/,github/release-drafter.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/,github/workflows/build.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/,github/workflows/codeql.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/,github/workflows/linter.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/,github/workflows/release-drafter.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.go-version" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.golangci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/code.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/compile.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/deps.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test.mk" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tools.mk" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.dockerignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.kubebuilder-layout.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default/kustomization.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default/manager_auth_proxy_patch.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/default/manager_config_patch.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/manager/kustomization.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/manager/manager.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/prometheus/kustomization.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/prometheus/monitor.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/auth_proxy_client_clusterrole.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/auth_proxy_role.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/auth_proxy_role_binding.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/auth_proxy_service.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/kustomization.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/leader_election_role.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/leader_election_role_binding.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/role_binding.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/rbac/service_account.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/hack/boilerplate.go.txt" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
