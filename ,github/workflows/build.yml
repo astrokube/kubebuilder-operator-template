@@ -10,10 +10,10 @@ jobs:
         go-version: ["1.20"]
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Go ${{ matrix.go-version }}
+      - name: Setup Go $"{{" matrix.go-version "}}"
         uses: actions/setup-go@v4
         with:
-          go-version: ${{ matrix.go-version }}
+          go-version: $"{{" matrix.go-version "}}"
       - name: Install Golang Tools
         run: make tools
       - name: Test
