@@ -1,7 +1,7 @@
-GO_VERSION 		:= $(shell cat .go-version)
-GO  			= GOFLAGS=-mod=readonly go
-GO_CMD          ?= go
-PROJECT_NAME 	:= kubebuilder-initializer-plugin
+# Tools
+GO  				= GOFLAGS=-mod=readonly go
+GOIMPORT			= goimport
+GOLINTER			?= golangci-lint
 
 # Image URL to use all building/pushing image targets
 IMG ?= controller:latest
@@ -42,6 +42,11 @@ help: ## Display this help.
 
 ##@ Development
 
+.PHONY: git-hooks
+git-hooks: ## Setup githooks for the repository
+	@echo "=== $(PROJECT_NAME) === [ git-hooks        ]: Configuring git hooks..."
+	git config core.hooksPath .githooks
+
 .PHONY: manifests
 manifests: controller-gen ## Generate WebhookConfiguration, ClusterRole and CustomResourceDefinition objects.
 	$(CONTROLLER_GEN) rbac:roleName=manager-role crd webhook paths="./..." output:crd:artifacts:config=config/crd/bases
@@ -50,17 +55,31 @@ manifests: controller-gen ## Generate WebhookConfiguration, ClusterRole and Cust
 generate: controller-gen ## Generate code containing DeepCopy, DeepCopyInto, and DeepCopyObject method implementations.
 	$(CONTROLLER_GEN) object:headerFile="hack/boilerplate.go.txt" paths="./..."
 
-.PHONY: fmt
-fmt: ## Run go fmt against code.
-	go fmt ./...
-
 .PHONY: vet
 vet: ## Run go vet against code.
 	go vet ./...
 
+.PHONY: fmt
+fmt: ## Format the code
+	@echo "=== $(PROJECT_NAME) === [ fmt ]: formatting the code with goimport..."
+	@$($(GOIMPORT) -d $(find . -type f -name '*.go' -not -path "./vendor/*")
+
 .PHONY: test
 test: manifests generate fmt vet envtest ## Run tests.
 	KUBEBUILDER_ASSETS="$(shell $(ENVTEST) use $(ENVTEST_K8S_VERSION) --bin-dir $(LOCALBIN) -p path)" go test ./... -coverprofile cover.out
+
+.PHONY: lint
+lint: ## Run static analysis with golangci.
+	@echo "=== $(PROJECT_NAME) === [ lint ]: Validating source code running $(GOLINTER)..."
+	$(GOLINTER) run --verbose ./...
+
+.PHONY: tools
+tools: ## Install required tools
+	@echo "=== $(PROJECT_NAME) === [ tools            ]: Installing tools required by the project..."
+	@cd tools && $(GO) mod download
+	@cd tools && cat tools.go | grep _ | awk -F'"' '{print $$2}' | xargs -tI % go install %
+	@cd tools && $(GO) mod tidy
+
 
 ##@ Build
 
@@ -159,10 +178,3 @@ $(CONTROLLER_GEN): $(LOCALBIN)
 envtest: $(ENVTEST) ## Download envtest-setup locally if necessary.
 $(ENVTEST): $(LOCALBIN)
 	test -s $(LOCALBIN)/setup-envtest || GOBIN=$(LOCALBIN) go install sigs.k8s.io/controller-runtime/tools/setup-envtest@latest
-
-include build/tools.mk
-include build/deps.mk
-include build/code.mk
-include build/test.mk
-include build/compile.mk
-include build/install.mk
