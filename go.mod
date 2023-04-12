@@ -1,4 +1,4 @@
-module github.com/{{repository.owner}}/{{repository.name}}
+module github.com/{{.repository.owner}}/{{.repository.name}}
 
 go 1.19
 
