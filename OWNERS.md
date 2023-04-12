@@ -3,7 +3,7 @@ approvers:
 {{- range .owners}}
 {{- range .roles}}
 {{- if eq . "approver"}}
-- Hola
+- {{../.member}}
 {{- end}}
 {{- end}}
 {{- end}}

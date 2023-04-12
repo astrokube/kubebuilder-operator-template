@@ -1,4 +1,4 @@
-module github.com/astrokube/astronetes-ingress-operator
+module github.com/{{repository.owner}}/{{repository.name}}
 
 go 1.19
 
