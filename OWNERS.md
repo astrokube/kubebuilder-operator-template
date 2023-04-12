@@ -1,14 +1,14 @@
 # See the OWNERS docs: https://git.k8s.io/community/contributors/guide/owners.md
 approvers:
 {{range .owners}}
-{{if coll.Has .roles approver}}
+{{if .role.Has "approver"}}
 - {{ .alias }}
 {{end}}
 {{end}}
 
 reviewers:
-{{- range .owners}}
-  {{- if coll.Has .roles reviewer}}
+{{range .owners}}
+{{if .role.Has "reviewer"}}
 - {{ .alias }}
-{{- end}}
-{{- end}}
+{{end}}
+{{end}}
